@@ -1,0 +1,56 @@
+{
+  "skill_name": "role-skill-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "请基于 repo-a 和 repo-b 为我生成一个架构师 skill，默认自适应深度，要求先识别跨仓冲突。",
+      "expected_output": "输出包含多仓库事实、冲突清单、待确认决策点，并生成可直接使用的架构师 SKILL.md 初稿。",
+      "assertions": [
+        "输出中明确出现 target_repo_paths 字段",
+        "输出包含名为 Conflicts and Open Decisions 的章节",
+        "输出中明确写出先提示冲突再确认的策略",
+        "输出中包含 Generated Skill Content 章节"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "为一个多仓库系统创建 senior-developer 角色 skill，重点保证改动有验证与回滚说明。",
+      "expected_output": "输出的角色 skill 包含实现流程、验证清单、风险与回滚约束。",
+      "assertions": [
+        "生成结果包含 Validation Checklist 章节",
+        "生成结果包含 Residual Risks and Rollback 或等价回滚段落",
+        "生成的角色为 senior developer 且不混入 architect 职责主语"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "我只给你一个仓库路径，请创建 architect 角色 skill，并按标准深度执行。",
+      "expected_output": "输出可在单仓库下工作的架构师 skill，且不会强制跨仓冲突流程。",
+      "assertions": [
+        "输出中 depth_mode 使用 standard 或与其等价描述",
+        "输出中不把跨仓冲突检查当作必需前置阻塞步骤",
+        "输出中包含架构方案和权衡要求"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "请为三个仓库创建角色 skill：repo-api、repo-web、repo-data，并给每个仓库设置别名。",
+      "expected_output": "输出包含 repo_aliases 映射，并在事实梳理中按仓库归类。",
+      "assertions": [
+        "输出中存在 repo_aliases 字段且至少包含 3 组映射",
+        "输出中有按仓库分组的信息区块（例如 Project Facts by Repository）",
+        "输出中明确标识跨仓依赖关系"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "在不允许自动决策冲突的前提下，创建一个可复用角色 skill。",
+      "expected_output": "输出严格遵守冲突先提示策略，并给出待用户确认的决策点清单。",
+      "assertions": [
+        "输出包含至少一个待确认决策点列表",
+        "输出中出现不自动定夺或同义约束语句",
+        "输出中未出现自动合并冲突作为默认策略"
+      ]
+    }
+  ]
+}

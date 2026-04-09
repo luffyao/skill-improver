@@ -1,0 +1,55 @@
+{
+  "skill_name": "senior-software-developer-role-template",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这个接口偶发超时，请给出修复方案并保证不会引入明显回归。",
+      "expected_output": "先定位根因，再给实现步骤与验证计划，最后给回滚建议。",
+      "assertions": [
+        "输出包含 Problem Framing 章节",
+        "输出包含 Validation Results 章节",
+        "输出包含 Residual Risks and Rollback 章节"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "请重构这个模块，目标是提高可维护性但不改变外部行为。",
+      "expected_output": "给出边界清晰的重构计划、影响面分析和验证结果模板。",
+      "assertions": [
+        "输出明确写出不改变外部行为或等价约束",
+        "输出包含影响面分析描述",
+        "输出包含 Implementation Plan 章节"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "修复一个并发下的数据竞态问题，要求可回归测试。",
+      "expected_output": "先做根因分析，再给改动计划，并明确并发相关验证。",
+      "assertions": [
+        "输出提及竞态根因或并发条件",
+        "输出包含至少一条并发验证或回归测试步骤",
+        "输出中包含风险与回滚说明"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "新增一个功能，但发布窗口非常短，请给最小可交付实现方案。",
+      "expected_output": "输出分步实现与风险控制，强调范围收敛和可验证交付。",
+      "assertions": [
+        "输出体现范围收敛策略",
+        "输出有分步实现计划",
+        "输出给出可执行验证步骤"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "这个缺陷复现不稳定，请你给出定位到修复的完整执行框架。",
+      "expected_output": "输出包含定位路径、实现改动框架、验证与残余风险。",
+      "assertions": [
+        "输出包含从定位到修复的流程链路",
+        "输出包含 Validation Results 章节",
+        "输出包含 Residual Risks and Rollback 章节"
+      ]
+    }
+  ]
+}

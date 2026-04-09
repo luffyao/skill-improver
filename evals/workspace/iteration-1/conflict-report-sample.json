@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-04-09",
+  "repos": [
+    "/repo/api",
+    "/repo/web"
+  ],
+  "summary": {
+    "conflict_count": 0,
+    "risk_level": "unknown"
+  },
+  "conflicts": [],
+  "open_decisions": []
+}

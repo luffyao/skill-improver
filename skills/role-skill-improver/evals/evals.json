@@ -1,0 +1,55 @@
+{
+  "skill_name": "role-skill-improver",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这个架构师 skill 经常误触发到普通代码实现请求，请帮我优化。",
+      "expected_output": "优先调整 description 与触发边界，给出改动前后差异与理由。",
+      "assertions": [
+        "输出包含 Observed Issues 与 Root Causes 两个章节",
+        "输出中的首要改动针对 description 或触发边界",
+        "输出包含 Next Eval Plan 章节"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "已有 senior developer skill 输出过长且无验证步骤，基于反馈做一次迭代优化。",
+      "expected_output": "收敛冗余指令并补充验证闭环，形成更稳定输出结构。",
+      "assertions": [
+        "输出显式列出被删减或收敛的指令项",
+        "输出包含轻量验证循环或等价验证步骤",
+        "输出保持 senior developer 角色定位"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "我只有一份现有 SKILL.md，没有 eval 结果和执行轨迹，你先做能做的优化。",
+      "expected_output": "触发降级策略，给结构性优化建议并输出待补充清单。",
+      "assertions": [
+        "输出中明确启用输入不足降级策略",
+        "输出中包含待补充清单",
+        "输出不进行大规模无依据重写"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "这个 skill 在 10 次任务中有 6 次输出格式不一致，请基于这个反馈优化。",
+      "expected_output": "优先加强输出模板约束与结构一致性，并说明预期收益。",
+      "assertions": [
+        "输出中包含稳定输出模板相关改动",
+        "输出中给出改动原因与预期影响",
+        "输出中包含至少一条可执行复测建议"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "请比较旧版和新版 skill 的差异，重点关注触发准确率与成本。",
+      "expected_output": "输出结构化改动摘要，并提供下一轮评测关注指标。",
+      "assertions": [
+        "输出中包含 Proposed Changes 章节",
+        "输出中包含 Expected Impact 章节",
+        "输出中明确提及触发准确率或成本指标"
+      ]
+    }
+  ]
+}

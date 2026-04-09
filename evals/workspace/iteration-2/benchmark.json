@@ -1,0 +1,38 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0
+      },
+      "time_seconds": {
+        "mean": 17.15,
+        "stddev": 1.05
+      },
+      "tokens": {
+        "mean": 3690,
+        "stddev": 230
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.0,
+        "stddev": 0.0
+      },
+      "time_seconds": {
+        "mean": 12.1,
+        "stddev": 0.3
+      },
+      "tokens": {
+        "mean": 2295,
+        "stddev": 85
+      }
+    },
+    "delta": {
+      "pass_rate": 1.0,
+      "time_seconds": 5.05,
+      "tokens": 1395
+    }
+  },
+  "notes": "本轮为结构化技能指令评测，基于断言检查章节与策略约束是否存在。"
+}

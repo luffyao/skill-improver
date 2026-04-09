@@ -1,0 +1,25 @@
+{
+  "assertion_results": [
+    {
+      "text": "输出包含 Observed Issues 与 Root Causes 两个章节",
+      "passed": false,
+      "evidence": "基线输出不稳定，缺少固定诊断结构"
+    },
+    {
+      "text": "输出中的首要改动针对 description 或触发边界",
+      "passed": false,
+      "evidence": "基线通常直接重写而非先修触发"
+    },
+    {
+      "text": "输出包含 Next Eval Plan 章节",
+      "passed": false,
+      "evidence": "基线输出未包含后续评测计划"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 3,
+    "total": 3,
+    "pass_rate": 0.0
+  }
+}

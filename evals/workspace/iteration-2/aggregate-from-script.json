@@ -1,0 +1,34 @@
+{
+  "totals": {
+    "passed": 7,
+    "failed": 7,
+    "total": 14
+  },
+  "pass_rate": 0.5,
+  "files": [
+    {
+      "file": "evals/workspace/iteration-2/eval-role-skill-creator/without_skill/grading.json",
+      "passed": 0,
+      "failed": 4,
+      "total": 4
+    },
+    {
+      "file": "evals/workspace/iteration-2/eval-role-skill-creator/with_skill/grading.json",
+      "passed": 4,
+      "failed": 0,
+      "total": 4
+    },
+    {
+      "file": "evals/workspace/iteration-2/eval-role-skill-improver/without_skill/grading.json",
+      "passed": 0,
+      "failed": 3,
+      "total": 3
+    },
+    {
+      "file": "evals/workspace/iteration-2/eval-role-skill-improver/with_skill/grading.json",
+      "passed": 3,
+      "failed": 0,
+      "total": 3
+    }
+  ]
+}

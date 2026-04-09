@@ -1,0 +1,30 @@
+{
+  "assertion_results": [
+    {
+      "text": "输出中明确出现 target_repo_paths 字段",
+      "passed": false,
+      "evidence": "基线输出未包含结构化多仓字段"
+    },
+    {
+      "text": "输出包含名为 Conflicts and Open Decisions 的章节",
+      "passed": false,
+      "evidence": "基线输出无固定章节"
+    },
+    {
+      "text": "输出中明确写出先提示冲突再确认的策略",
+      "passed": false,
+      "evidence": "基线输出未体现冲突门控"
+    },
+    {
+      "text": "输出中包含 Generated Skill Content 章节",
+      "passed": false,
+      "evidence": "基线输出未给生成产物章节"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

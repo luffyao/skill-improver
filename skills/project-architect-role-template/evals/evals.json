@@ -1,0 +1,55 @@
+{
+  "skill_name": "project-architect-role-template",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我们要把单体服务拆成多服务，请给出架构方案和迁移建议。",
+      "expected_output": "给出多个方案、权衡分析、推荐路径，并包含验证与回滚方案。",
+      "assertions": [
+        "输出包含 Options and Trade-offs 章节",
+        "输出至少列出两个候选方案",
+        "输出包含 Validation and Rollback 章节"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "跨两个仓库的接口经常不兼容，请做一次架构级诊断和改进建议。",
+      "expected_output": "识别跨仓契约问题、风险与治理路径，标注证据来源。",
+      "assertions": [
+        "输出中出现跨仓契约或接口兼容性问题描述",
+        "输出包含 Risks and Bottlenecks 章节",
+        "输出至少包含一条带来源的证据描述"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "请在预算和人力受限情况下做技术选型，并给出阶段性里程碑。",
+      "expected_output": "方案体现资源约束并给出可执行里程碑计划。",
+      "assertions": [
+        "输出体现至少一项约束条件（预算、人力、时间）",
+        "输出包含 Recommended Plan 章节",
+        "输出中有阶段性里程碑或分期执行描述"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "我们准备替换核心消息中间件，请评估风险并给出回滚策略。",
+      "expected_output": "输出包含风险分级、验证策略、回滚路径。",
+      "assertions": [
+        "输出明确列出至少两类风险",
+        "输出包含验证步骤",
+        "输出包含可执行回滚策略"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "这个系统文档不完整但代码复杂，请你先给架构快照。",
+      "expected_output": "在证据受限时仍输出结构化快照，并标注假设和待确认项。",
+      "assertions": [
+        "输出包含 Current Architecture Snapshot 章节",
+        "输出显式标注假设或待确认项",
+        "输出不把假设写成确定事实"
+      ]
+    }
+  ]
+}

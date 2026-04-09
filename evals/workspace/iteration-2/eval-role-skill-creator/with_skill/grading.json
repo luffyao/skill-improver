@@ -1,0 +1,30 @@
+{
+  "assertion_results": [
+    {
+      "text": "输出中明确出现 target_repo_paths 字段",
+      "passed": true,
+      "evidence": "输出模板包含 target_repo_paths 输入字段说明"
+    },
+    {
+      "text": "输出包含名为 Conflicts and Open Decisions 的章节",
+      "passed": true,
+      "evidence": "结构模板中包含 Conflicts and Open Decisions"
+    },
+    {
+      "text": "输出中明确写出先提示冲突再确认的策略",
+      "passed": true,
+      "evidence": "冲突策略段落写明不自动定夺"
+    },
+    {
+      "text": "输出中包含 Generated Skill Content 章节",
+      "passed": true,
+      "evidence": "输出结构模板第5项为 Generated Skill Content"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

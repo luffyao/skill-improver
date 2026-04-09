@@ -1,0 +1,25 @@
+{
+  "assertion_results": [
+    {
+      "text": "输出包含 Observed Issues 与 Root Causes 两个章节",
+      "passed": true,
+      "evidence": "推荐输出结构包含对应章节"
+    },
+    {
+      "text": "输出中的首要改动针对 description 或触发边界",
+      "passed": true,
+      "evidence": "优化优先级第1项为 description"
+    },
+    {
+      "text": "输出包含 Next Eval Plan 章节",
+      "passed": true,
+      "evidence": "推荐输出结构包含 Next Eval Plan"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1.0
+  }
+}
