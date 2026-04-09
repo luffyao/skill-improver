@@ -2,20 +2,28 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Language
+
+**Write this entire file in English only.** Do not use Chinese or other languages in `CLAUDE.md`. Other docs (e.g. `README.md`) may follow separate project language rules.
+
 ## Commands
 
 ### Helper Scripts
+
 Generate conflict report from multiple repositories:
+
 ```bash
 python3 skills/role-skill-creator/scripts/generate_conflict_report.py --repos /path/to/repo1 /path/to/repo2 --output evals/workspace/iteration-x/conflict-report.json
 ```
 
 Bootstrap doc cache skeleton under a target repo (INDEX, manifest, entries):
+
 ```bash
 python3 skills/role-skill-creator/scripts/bootstrap_doc_cache.py --repo /path/to/target-repo
 ```
 
 Aggregate evaluation statistics:
+
 ```bash
 python3 skills/role-skill-improver/scripts/aggregate_eval_stats.py --workspace evals/workspace/iteration-x --output evals/workspace/iteration-x/benchmark.json
 ```
@@ -35,7 +43,7 @@ This is a **role-based Agent Skill development system** for creating, optimizing
 
 ### Directory Structure
 
-```
+```text
 skill-improver/
 ├── skills/                     # All skill implementations
 │   └── <skill-name>/
@@ -60,6 +68,7 @@ skill-improver/
 ### SKILL.md Format Standards
 
 Each skill must have:
+
 - **YAML frontmatter**: Required fields: `name`, `description`
 - **Trigger conditions**: When the skill should be invoked
 - **Input parameters**: Documented expected inputs
@@ -68,16 +77,16 @@ Each skill must have:
 - **Safety constraints**: Guardrails for proper usage
 - **Quality checklist**: Verification steps before completion
 
-## 文档同步要求（必读）
+## Documentation sync (required)
 
-本仓库**需求或行为有任何变更**时，必须在交付实现的同时，**同步更新所有受影响的文档**，避免代码与说明脱节。
+Whenever **requirements or behavior** in this repo change, update **all affected documentation** in the same change as the implementation, so code and docs stay aligned.
 
-1. **用户入口**：`README.md` — 新参数、新脚本、新目录约定、新使用流程，凡影响「怎么用这个仓库」的，都要有对应说明或命令示例。
-2. **技能契约**：受影响的 `skills/<name>/SKILL.md`，以及 `references/`、`evals/evals.json`（若行为、输入、断言或评测场景变化）。
-3. **设计与规格**：若变更涉及约定或架构，更新或新增 `docs/superpowers/specs/` 下相关规格；必要时更新 `docs/superpowers/plans/` 与复盘类文档。
-4. **本文件**：若工作流或原则变化，更新 `CLAUDE.md`。
+1. **User entry point**: `README.md` — new flags, scripts, directory conventions, or workflows that affect how to use this repo need matching prose or command examples.
+2. **Skill contracts**: affected `skills/<name>/SKILL.md`, plus `references/` and `evals/evals.json` when behavior, inputs, assertions, or eval scenarios change.
+3. **Design and specs**: if the change affects conventions or architecture, update or add the relevant files under `docs/superpowers/specs/`; update `docs/superpowers/plans/` and review notes when appropriate.
+4. **This file**: if workflow or principles change, update `CLAUDE.md` (still **English only**).
 
-**自检**：合并前自问 — 若新同事只读 README 能否完成新能力？评测与技能描述是否仍一致？
+**Self-check before merge**: Could a new teammate rely on `README.md` alone to use the new capability? Do evals and skill descriptions still match?
 
 ## Key Documentation
 
