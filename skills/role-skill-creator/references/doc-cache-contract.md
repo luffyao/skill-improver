@@ -25,3 +25,7 @@
 
 - 不写入 `.env`、私钥、token 原文。
 - 若从代码推断出敏感配置位置，仅写「见某路径，需人工确认」，不抄录值。
+
+## 辅助脚本
+
+仓库内提供 `scripts/bootstrap_doc_cache.py`：按顶层目录生成 `INDEX.md`、`manifest.json` 与 `entries/*.md` 占位，便于与 creator 流程对齐。使用 `python3 scripts/bootstrap_doc_cache.py --help` 查看参数。

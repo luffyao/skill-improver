@@ -130,4 +130,5 @@ python3 skills/role-skill-improver/scripts/aggregate_eval_stats.py \
 - 多仓库冲突评测集：`evals/multi-repo-conflicts/evals.json`
 - 首轮对照评测结果：`evals/workspace/iteration-2/`
 - 冲突报告骨架脚本：`skills/role-skill-creator/scripts/generate_conflict_report.py`
+- 文档缓存骨架脚本：`skills/role-skill-creator/scripts/bootstrap_doc_cache.py`
 - 评测聚合脚本：`skills/role-skill-improver/scripts/aggregate_eval_stats.py`
