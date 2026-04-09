@@ -48,6 +48,9 @@
 - 生成目标角色 `SKILL.md`
 - 多仓库事实与依赖梳理
 - 冲突清单与待确认决策（默认不自动定夺）
+- **文档稀疏时**：可在各目标仓库内生成 `docs/agent-skill-cache/`（`INDEX.md` + `manifest.json`），并在角色 skill 中写入**相对路径指针**供后续查询；可用 `doc_bootstrap: false` 或 `constraints` 含 `skip-doc-bootstrap` 关闭写盘
+
+规格说明：`docs/superpowers/specs/2026-04-10-doc-bootstrap-for-role-skill-creator-design.md`
 
 ### 2) 优化已有 Skill（improver）
 
@@ -117,6 +120,7 @@ python3 skills/role-skill-improver/scripts/aggregate_eval_stats.py \
 ## 设计文档
 
 - `docs/superpowers/specs/2026-04-09-role-skill-system-design.md`
+- `docs/superpowers/specs/2026-04-10-doc-bootstrap-for-role-skill-creator-design.md`
 - `docs/superpowers/plans/2026-04-09-role-skill-system-implementation-plan.md`
 - `docs/superpowers/reviews/2026-04-09-iteration-1-review.md`
 - `docs/superpowers/reviews/2026-04-09-iteration-2-eval-review.md`
@@ -127,4 +131,3 @@ python3 skills/role-skill-improver/scripts/aggregate_eval_stats.py \
 - 首轮对照评测结果：`evals/workspace/iteration-2/`
 - 冲突报告骨架脚本：`skills/role-skill-creator/scripts/generate_conflict_report.py`
 - 评测聚合脚本：`skills/role-skill-improver/scripts/aggregate_eval_stats.py`
-

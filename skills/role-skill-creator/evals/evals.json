@@ -51,6 +51,34 @@
         "输出中出现不自动定夺或同义约束语句",
         "输出中未出现自动合并冲突作为默认策略"
       ]
+    },
+    {
+      "id": 6,
+      "prompt": "目标仓库几乎没有文档只有代码，请创建 architect 角色 skill，并自动在目标仓库内生成可查询的缓存文档。",
+      "expected_output": "在目标仓库约定路径生成 INDEX 与 manifest，且生成的角色 skill 含项目文档缓存指针。",
+      "assertions": [
+        "输出或生成说明中包含 docs/agent-skill-cache 或 doc_output_root 约定的路径",
+        "输出明确包含 INDEX.md 与 manifest.json",
+        "Generated Skill Content 或等价段落中包含项目文档缓存或按需读取 INDEX 的说明"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "请创建角色 skill，但不要往目标仓库写任何文件，doc_bootstrap 为 false。",
+      "expected_output": "跳过写盘，不声称已创建目标仓内文件。",
+      "assertions": [
+        "输出体现 doc_bootstrap 为 false 或 skip-doc-bootstrap 时不写盘",
+        "输出不包含已写入目标仓库 INDEX 的肯定陈述"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "两个仓库分别把文档缓存写到自定义相对路径：api 用 docs/skill-cache，web 用 .agent-skill/docs。",
+      "expected_output": "使用 doc_output_roots 映射，两仓路径互不混淆。",
+      "assertions": [
+        "输出中出现 doc_output_roots 或两个仓库各自的相对路径说明",
+        "输出区分两个仓库的缓存根路径"
+      ]
     }
   ]
 }
