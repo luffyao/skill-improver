@@ -95,6 +95,15 @@ python3 skills/role-skill-improver/scripts/aggregate_eval_stats.py \
   --output evals/workspace/iteration-x/benchmark.json
 ```
 
+在**目标仓库**内生成文档缓存骨架（`INDEX.md`、`manifest.json`、`entries/*.md`，默认写入 `docs/agent-skill-cache/`）：
+
+```bash
+python3 /path/to/skill-improver/skills/role-skill-creator/scripts/bootstrap_doc_cache.py \
+  --repo /path/to/target-repo
+```
+
+预览不写盘：`--dry-run`。自定义相对输出目录：`--doc-root .agent-skill/docs`。
+
 ## 常见错误与排查
 
 - **`target_repo_paths` 无效或为空**
